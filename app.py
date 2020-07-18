@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from alumnologic import AlumnoLogic
 
+
 app = Flask(__name__)
 
 
