@@ -24,6 +24,10 @@ def index():
 def breed():
     breed = False
     form = InfoForm()
+    if form.validate_on_submit():
+        breed = form.breed.data
+        form.breed.data = ""
+    return render_template("breed.html", form=form, breed=breed)
 
 
 if __name__ == "__main__":

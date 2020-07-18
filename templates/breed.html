@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>breed</title>
+</head>
+
+<body>
+    <h1>breed</h1>
+    <br>
+
+    {% if breed %}
+    la raza que seleccionaste es {{breed}} puedes volverlo a modificar
+    {% else %}
+    por favor escriba una raza:
+    {% endif %}
+
+    <form method="POST">
+        {{form.hidden_tag()}}
+        {{form.breed.label}}{{form.breed(class="some-css-class", style="background:blue;")}}
+        {{form.submit()}}
+    </form>
+</body>
+
+</html>
